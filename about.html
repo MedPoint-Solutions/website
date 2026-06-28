@@ -22,6 +22,18 @@
                 <a href="testimonials.html" class="hover:text-slate-900 transition-colors">Testimonials</a>
                 <a href="contact.html" class="hover:text-slate-900 transition-colors">Pricing & Inquiries</a>
             </nav>
+            <button id="menu-toggle" class="md:hidden flex flex-col justify-center items-center w-10 h-10 space-y-1.5">
+                <span class="block w-6 h-0.5 bg-slate-900"></span>
+                <span class="block w-6 h-0.5 bg-slate-900"></span>
+                <span class="block w-6 h-0.5 bg-slate-900"></span>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200 px-6 py-4 space-y-4 text-sm font-semibold text-slate-600">
+            <a href="about.html" class="block text-slate-900">About</a>
+            <a href="services.html" class="block hover:text-slate-900 transition-colors">Services</a>
+            <a href="portfolio.html" class="block hover:text-slate-900 transition-colors">Portfolio</a>
+            <a href="testimonials.html" class="block hover:text-slate-900 transition-colors">Testimonials</a>
+            <a href="contact.html" class="block hover:text-slate-900 transition-colors">Pricing & Inquiries</a>
         </div>
     </header>
 
@@ -38,7 +50,6 @@
         <div class="bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-slate-200">
             <h2 class="text-2xl font-bold tracking-tight text-slate-900 mb-1">Yael Waknine</h2>
             <p class="text-slate-500 font-medium text-lg mb-8">Medical Director, Oncology | CME Strategist | Scientific Content Developer</p>
-
             <p class="text-slate-600 leading-relaxed mb-6 font-medium text-base">
                 Accomplished oncology education specialist with 20+ years' experience creating evidence-based education for healthcare professionals. Expertise spans curriculum design, faculty engagement, outcomes analytics, and strategic grant development across live, virtual, and digital platforms.
             </p>
@@ -48,13 +59,11 @@
             <p class="text-slate-600 leading-relaxed mb-10">
                 Over 23 years of communicating medical news and education with clarity and precision — authoring more than 10,000 articles, hosting podcasts, and providing live conference coverage worldwide.
             </p>
-
             <blockquote class="border-l-4 border-red-600 pl-4 italic text-slate-600 bg-slate-50 py-3 pr-2 rounded-r-lg max-w-xl mb-10">
                 "If you can't explain it simply, you don't understand it well enough."
                 <span class="text-xs font-bold text-slate-400 block not-italic mt-1">— Albert Einstein</span>
             </blockquote>
-
-            <div class="flex gap-4">
+            <div class="flex gap-4 flex-wrap">
                 <a href="services.html" class="bg-slate-900 hover:bg-red-700 text-white font-bold px-6 py-3 rounded-lg transition-colors text-sm">View Services</a>
                 <a href="contact.html" class="bg-slate-100 hover:bg-slate-200 text-slate-900 font-bold px-6 py-3 rounded-lg transition-colors text-sm">Get in Touch</a>
             </div>
@@ -65,6 +74,12 @@
     <footer class="bg-slate-950 border-t border-slate-800 py-8 px-6 text-center">
         <p class="text-slate-500 text-sm">© 2026 MedPoint Solutions, LLC. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
 
 </body>
 </html>
