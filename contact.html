@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing & Inquiries | MedPoint Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans antialiased">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="logo.jpg" alt="MedPoint Solutions Logo" class="h-14 w-auto">
+                <span class="font-bold text-xl tracking-tight text-slate-900">MedPoint Solutions <span class="text-red-700 text-sm font-bold tracking-widest uppercase">| Oncology Education</span></span>
+            </a>
+            <nav class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+                <a href="about.html" class="hover:text-slate-900 transition-colors">About</a>
+                <a href="services.html" class="hover:text-slate-900 transition-colors">Services</a>
+                <a href="portfolio.html" class="hover:text-slate-900 transition-colors">Portfolio</a>
+                <a href="testimonials.html" class="hover:text-slate-900 transition-colors">Testimonials</a>
+                <a href="contact.html" class="text-slate-900 transition-colors">Pricing & Inquiries</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white py-16 px-6 border-b-4 border-red-700">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-red-500 uppercase tracking-widest font-bold text-sm mb-4">Get in Touch</p>
+            <h1 class="text-4xl font-extrabold tracking-tight">Pricing & Inquiries</h1>
+            <p class="text-slate-300 mt-4">Tell us about your project and we'll be in touch shortly.</p>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="py-20 px-6">
+        <div class="max-w-2xl mx-auto">
+            <form action="https://formsubmit.co/ywaknine@proton.me" method="POST" class="space-y-6 bg-white p-8 md:p-12 rounded-2xl border border-slate-200 shadow-sm">
+                <input type="text" name="_honey" style="display:none">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="New Inquiry from MedPoint Solutions Website">
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold tracking-widest text-slate-500 uppercase mb-2">First Name</label>
+                        <input type="text" name="first_name" required
+                               class="w-full bg-slate-50 border border-slate-300 text-slate-900 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-red-600 transition-colors placeholder-slate-400"
+                               placeholder="Jane">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold tracking-widest text-slate-500 uppercase mb-2">Last Name</label>
+                        <input type="text" name="last_name" required
+                               class="w-full bg-slate-50 border border-slate-300 text-slate-900 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-red-600 transition-colors placeholder-slate-400"
+                               placeholder="Smith">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold tracking-widest text-slate-500 uppercase mb-2">Organization</label>
+                    <input type="text" name="organization"
+                           class="w-full bg-slate-50 border border-slate-300 text-slate-900 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-red-600 transition-colors placeholder-slate-400"
+                           placeholder="Company or Institution">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold tracking-widest text-slate-500 uppercase mb-2">Email Address</label>
+                    <input type="email" name="email" required
+                           class="w-full bg-slate-50 border border-slate-300 text-slate-900 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-red-600 transition-colors placeholder-slate-400"
+                           placeholder="you@example.com">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold tracking-widest text-slate-500 uppercase mb-2">Service of Interest</label>
+                    <select name="service"
+                            class="w-full bg-slate-50 border border-slate-300 text-slate-900 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-red-600 transition-colors">
+                        <option value="">Select a service...</option>
+                        <option value="Oncology CME Content">Oncology CME Content & Curriculum Development</option>
+                        <option value="Conference Coverage">Conference Coverage & Medical News Reporting</option>
+                        <option value="Faculty Engagement">Faculty Engagement & Collaboration</option>
+                        <option value="Strategic Proposal Support">Strategic Planning & Proposal Support</option>
+                        <option value="Digital Content Creation">Digital Content Creation</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold tracking-widest text-slate-500 uppercase mb-2">Project Details</label>
+                    <textarea name="message" rows="5" required
+                              class="w-full bg-slate-50 border border-slate-300 text-slate-900 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-red-600 transition-colors placeholder-slate-400 resize-none"
+                              placeholder="Briefly describe your project, timeline, and any budget parameters..."></textarea>
+                </div>
+
+                <button type="submit"
+                        class="w-full bg-red-700 hover:bg-red-600 text-white font-bold tracking-widest uppercase text-sm py-4 rounded-lg transition-colors">
+                    Submit Inquiry
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-8 px-6 text-center">
+        <p class="text-slate-500 text-sm">© 2026 MedPoint Solutions, LLC. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
