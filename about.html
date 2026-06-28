@@ -6,80 +6,212 @@
     <title>About | MedPoint Solutions</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-gray-50 text-gray-900 font-sans antialiased">
 
-    <!-- Header -->
-    <header class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
-        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex items-center space-x-3">
-                <img src="logo.jpg" alt="MedPoint Solutions Logo" class="h-14 w-auto">
-                <span class="font-bold text-xl tracking-tight text-slate-900">MedPoint Solutions <span class="text-red-700 text-sm font-bold tracking-widest uppercase">| Oncology Education</span></span>
-            </a>
-            <nav class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
-                <a href="about.html" class="text-slate-900 transition-colors">About</a>
-                <a href="services.html" class="hover:text-slate-900 transition-colors">Services</a>
-                <a href="portfolio.html" class="hover:text-slate-900 transition-colors">Portfolio</a>
-                <a href="testimonials.html" class="hover:text-slate-900 transition-colors">Testimonials</a>
-                <a href="contact.html" class="hover:text-slate-900 transition-colors">Pricing & Inquiries</a>
-            </nav>
-            <button id="menu-toggle" class="md:hidden flex flex-col justify-center items-center w-10 h-10 space-y-1.5">
-                <span class="block w-6 h-0.5 bg-slate-900"></span>
-                <span class="block w-6 h-0.5 bg-slate-900"></span>
-                <span class="block w-6 h-0.5 bg-slate-900"></span>
-            </button>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200 px-6 py-4 space-y-4 text-sm font-semibold text-slate-600">
-            <a href="about.html" class="block text-slate-900">About</a>
-            <a href="services.html" class="block hover:text-slate-900 transition-colors">Services</a>
-            <a href="portfolio.html" class="block hover:text-slate-900 transition-colors">Portfolio</a>
-            <a href="testimonials.html" class="block hover:text-slate-900 transition-colors">Testimonials</a>
-            <a href="contact.html" class="block hover:text-slate-900 transition-colors">Pricing & Inquiries</a>
-        </div>
-    </header>
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
 
-    <!-- Page Header -->
-    <section class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white py-16 px-6 border-b-4 border-red-700">
-        <div class="max-w-4xl mx-auto text-center">
-            <p class="text-red-500 uppercase tracking-widest font-bold text-sm mb-4">Executive Leadership</p>
-            <h1 class="text-4xl font-extrabold tracking-tight">About Yael Waknine</h1>
-        </div>
-    </section>
+        <a href="index.html" class="flex items-center space-x-3">
+            <img src="logo.jpg" alt="MedPoint Solutions Logo" class="h-14 w-auto">
+            <span class="font-bold text-xl tracking-tight text-slate-900">
+                MedPoint Solutions
+                <span class="text-red-700 text-sm font-bold tracking-widest uppercase">
+                    | Oncology Education
+                </span>
+            </span>
+        </a>
 
-    <!-- About Content -->
-    <section class="py-20 px-6 max-w-4xl mx-auto">
-        <div class="bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-slate-200">
-            <h2 class="text-2xl font-bold tracking-tight text-slate-900 mb-1">Yael Waknine</h2>
-            <p class="text-slate-500 font-medium text-lg mb-8">Medical Director, Oncology | CME Strategist | Scientific Content Developer</p>
-            <p class="text-slate-600 leading-relaxed mb-6 font-medium text-base">
-                Accomplished oncology education specialist with 20+ years' experience creating evidence-based education for healthcare professionals. Expertise spans curriculum design, faculty engagement, outcomes analytics, and strategic grant development across live, virtual, and digital platforms.
-            </p>
-            <p class="text-slate-600 leading-relaxed mb-6">
-                Proven record of translating emerging clinical data into balanced, guideline-aligned education across tumor types. Collaborative leader experienced in remote CME production and cross-functional teamwork for program delivery.
-            </p>
-            <p class="text-slate-600 leading-relaxed mb-10">
-                Over 23 years of communicating medical news and education with clarity and precision — authoring more than 10,000 articles, hosting podcasts, and providing live conference coverage worldwide.
-            </p>
-            <blockquote class="border-l-4 border-red-600 pl-4 italic text-slate-600 bg-slate-50 py-3 pr-2 rounded-r-lg max-w-xl mb-10">
-                "If you can't explain it simply, you don't understand it well enough."
-                <span class="text-xs font-bold text-slate-400 block not-italic mt-1">— Albert Einstein</span>
-            </blockquote>
-            <div class="flex gap-4 flex-wrap">
-                <a href="services.html" class="bg-slate-900 hover:bg-red-700 text-white font-bold px-6 py-3 rounded-lg transition-colors text-sm">View Services</a>
-                <a href="contact.html" class="bg-slate-100 hover:bg-slate-200 text-slate-900 font-bold px-6 py-3 rounded-lg transition-colors text-sm">Get in Touch</a>
-            </div>
-        </div>
-    </section>
+        <nav class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+            <a href="about.html" class="text-slate-900">About</a>
+            <a href="services.html" class="hover:text-slate-900">Services</a>
+            <a href="portfolio.html" class="hover:text-slate-900">Portfolio</a>
+            <a href="testimonials.html" class="hover:text-slate-900">Testimonials</a>
+            <a href="contact.html" class="hover:text-slate-900">Pricing & Inquiries</a>
+        </nav>
 
-    <!-- Footer -->
-    <footer class="bg-slate-950 border-t border-slate-800 py-8 px-6 text-center">
-        <p class="text-slate-500 text-sm">© 2026 MedPoint Solutions, LLC. All rights reserved.</p>
-    </footer>
+        <button id="menu-toggle" class="md:hidden flex flex-col justify-center items-center w-10 h-10 space-y-1.5">
+            <span class="block w-6 h-0.5 bg-slate-900"></span>
+            <span class="block w-6 h-0.5 bg-slate-900"></span>
+            <span class="block w-6 h-0.5 bg-slate-900"></span>
+        </button>
 
-    <script>
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
-    </script>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200 px-6 py-4 space-y-4 text-sm font-semibold text-slate-600">
+        <a href="about.html" class="block text-slate-900">About</a>
+        <a href="services.html" class="block">Services</a>
+        <a href="portfolio.html" class="block">Portfolio</a>
+        <a href="testimonials.html" class="block">Testimonials</a>
+        <a href="contact.html" class="block">Pricing & Inquiries</a>
+    </div>
+
+</header>
+
+<!-- Hero -->
+<section class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white py-16 px-6 border-b-4 border-red-700">
+
+    <div class="max-w-5xl mx-auto text-center">
+
+        <p class="text-red-500 uppercase tracking-widest font-bold text-sm mb-4">
+            Meet the Founder
+        </p>
+
+        <h1 class="text-5xl font-extrabold tracking-tight mb-4">
+            Yael Waknine
+        </h1>
+
+        <p class="text-xl text-slate-300">
+            Founder, MedPoint Solutions, LLC
+        </p>
+
+    </div>
+
+</section>
+
+<!-- About -->
+<section class="py-20 px-6">
+
+<div class="max-w-6xl mx-auto bg-white rounded-2xl shadow-sm border border-slate-200 p-10 md:p-14">
+
+<div class="grid md:grid-cols-3 gap-12 items-start">
+
+<!-- Photo -->
+
+<div class="flex justify-center">
+
+<img src="yael.jpg"
+     alt="Yael Waknine"
+     class="rounded-2xl shadow-xl border border-slate-200 w-full max-w-xs">
+
+</div>
+
+<!-- Content -->
+
+<div class="md:col-span-2">
+
+<p class="uppercase tracking-widest text-red-700 font-bold text-sm mb-3">
+
+Founder | Oncology Education Consultant
+
+</p>
+
+<h2 class="text-4xl font-extrabold text-slate-900 mb-4">
+
+Helping Healthcare Professionals Stay Ahead of Rapidly Evolving Cancer Care
+
+</h2>
+
+<p class="text-xl text-slate-600 font-medium mb-8">
+
+Oncology Education • Scientific Content Development • Strategic Consulting
+
+</p>
+
+<p class="text-slate-700 leading-8 mb-6">
+
+For more than <strong>20 years</strong>, I've partnered with medical education companies, healthcare organizations, and oncology experts to create evidence-based educational programs that transform complex clinical data into practical learning experiences.
+
+</p>
+
+<p class="text-slate-700 leading-8 mb-6">
+
+My expertise spans curriculum development, faculty engagement, educational strategy, outcomes assessment, and strategic grant support across live, virtual, and digital educational platforms. I specialize in translating emerging clinical evidence into balanced, guideline-aligned education that supports informed clinical decision-making and ultimately improves patient care.
+
+</p>
+
+<p class="text-slate-700 leading-8 mb-6">
+
+Throughout my career, I've authored more than <strong>10,000 oncology news and educational articles</strong>, hosted podcasts, interviewed internationally recognized oncology experts, and provided live coverage of major cancer meetings around the world.
+
+</p>
+
+<p class="text-slate-700 leading-8">
+
+Whether developing accredited CME, creating educational content, or supporting scientific initiatives, my goal is always the same—to make complex oncology understandable, engaging, and clinically meaningful.
+
+</p>
+
+<!-- Quote -->
+
+<div class="mt-12 pt-8 border-t border-slate-200">
+
+<blockquote class="text-center max-w-2xl mx-auto">
+
+<p class="text-2xl italic text-slate-700 leading-relaxed">
+
+"If you can't explain it simply, you don't understand it well enough."
+
+</p>
+
+<footer class="mt-4 text-red-700 font-semibold">
+
+— Albert Einstein
+
+</footer>
+
+</blockquote>
+
+<p class="text-center text-slate-600 mt-6">
+
+At MedPoint Solutions, that philosophy guides every educational program, presentation, and scientific resource I create.
+
+</p>
+
+</div>
+
+<!-- Buttons -->
+
+<div class="flex gap-4 mt-12 flex-wrap">
+
+<a href="services.html"
+
+class="bg-slate-900 hover:bg-red-700 transition text-white font-bold px-8 py-3 rounded-lg">
+
+View Services
+
+</a>
+
+<a href="contact.html"
+
+class="bg-slate-100 hover:bg-slate-200 transition text-slate-900 font-bold px-8 py-3 rounded-lg">
+
+Get in Touch
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Footer -->
+
+<footer class="bg-slate-950 border-t border-slate-800 py-8 text-center">
+
+<p class="text-slate-500 text-sm">
+
+© 2026 MedPoint Solutions, LLC. All rights reserved.
+
+</p>
+
+</footer>
+
+<script>
+
+document.getElementById('menu-toggle').addEventListener('click', function () {
+
+document.getElementById('mobile-menu').classList.toggle('hidden');
+
+});
+
+</script>
 
 </body>
 </html>
