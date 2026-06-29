@@ -1,33 +1,83 @@
-<!-- Hero -->
-<section class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white py-24 px-6 border-b-4 border-red-700">
-    <div class="max-w-5xl mx-auto text-center">
-        <img src="logo.jpg" alt="MedPoint Solutions Logo" class="h-36 w-auto mx-auto mb-8">
-        <p class="text-red-500 uppercase tracking-widest font-bold text-sm mb-4">
-            MedPoint Solutions, LLC
-        </p>
-        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-8">
-            Bridging the gap between complex clinical data and high-impact learning
-        </h1>
-        <div class="max-w-3xl mx-auto text-lg md:text-xl text-slate-300 leading-relaxed space-y-6 mb-12">
-            <p>
-                MedPoint Solutions meets you at every stage of the educational process, from initial strategy to final content deliverables.
-            </p>
-            <p>
-                We transform rapidly evolving oncology data into scientifically rigorous, engaging educational experiences that empower healthcare professionals to confidently apply emerging evidence for improved patient outcomes.
-            </p>
-        </div>
-        <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-12 text-lg font-bold tracking-widest uppercase border-t border-b border-slate-800 py-4 max-w-xl mx-auto">
-            <span class="text-white"><span class="text-red-500 mr-2">▪</span> Clear</span>
-            <span class="text-white"><span class="text-red-500 mr-2">▪</span> Concise</span>
-            <span class="text-white"><span class="text-red-500 mr-2">▪</span> On Target</span>
-        </div>
-        <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-            <a href="about.html" class="bg-red-700 hover:bg-red-600 text-white font-bold px-8 py-3 rounded-lg transition-colors">
-                Meet Yael
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedPoint Solutions, LLC | Oncology Education</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans antialiased">
+
+    <header class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="logo.jpg" alt="MedPoint Solutions Logo" class="h-14 w-auto">
+                <span class="font-bold text-xl tracking-tight text-slate-900">MedPoint Solutions <span class="text-red-700 text-sm font-bold tracking-widest uppercase">| Oncology Education</span></span>
             </a>
-            <a href="contact.html" class="bg-white hover:bg-slate-100 text-slate-900 font-bold px-8 py-3 rounded-lg transition-colors">
-                Get in Touch
-            </a>
+            <nav class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+                <a href="about.html" class="hover:text-slate-900 transition-colors">About</a>
+                <a href="services.html" class="hover:text-slate-900 transition-colors">Services</a>
+                <a href="portfolio.html" class="hover:text-slate-900 transition-colors">Portfolio</a>
+                <a href="testimonials.html" class="hover:text-slate-900 transition-colors">Testimonials</a>
+                <a href="contact.html" class="hover:text-slate-900 transition-colors">Pricing & Inquiries</a>
+            </nav>
+            <button id="menu-toggle" class="md:hidden flex flex-col justify-center items-center w-10 h-10 space-y-1.5">
+                <span class="block w-6 h-0.5 bg-slate-900"></span>
+                <span class="block w-6 h-0.5 bg-slate-900"></span>
+                <span class="block w-6 h-0.5 bg-slate-900"></span>
+            </button>
         </div>
-    </div>
-</section>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200 px-6 py-4 space-y-4 text-sm font-semibold text-slate-600">
+            <a href="about.html" class="block hover:text-slate-900 transition-colors">About</a>
+            <a href="services.html" class="block hover:text-slate-900 transition-colors">Services</a>
+            <a href="portfolio.html" class="block hover:text-slate-900 transition-colors">Portfolio</a>
+            <a href="testimonials.html" class="block hover:text-slate-900 transition-colors">Testimonials</a>
+            <a href="contact.html" class="block hover:text-slate-900 transition-colors">Pricing & Inquiries</a>
+        </div>
+    </header>
+
+    <section class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white py-24 px-6 border-b-4 border-red-700">
+        <div class="max-w-5xl mx-auto text-center">
+            <img src="logo.jpg" alt="MedPoint Solutions Logo" class="h-36 w-auto mx-auto mb-8">
+            <p class="text-red-500 uppercase tracking-widest font-bold text-sm mb-4">
+                MedPoint Solutions, LLC
+            </p>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-8">
+                Bridging the gap between complex clinical data and high-impact learning
+            </h1>
+            <div class="max-w-3xl mx-auto text-lg md:text-xl text-slate-300 leading-relaxed space-y-6 mb-12">
+                <p>
+                    MedPoint Solutions meets you at every stage of the educational process, from initial strategy to final content deliverables.
+                </p>
+                <p>
+                    We transform rapidly evolving oncology data into scientifically rigorous, engaging educational experiences that empower healthcare professionals to confidently apply emerging evidence for improved patient outcomes.
+                </p>
+            </div>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-12 text-lg font-bold tracking-widest uppercase border-t border-b border-slate-800 py-4 max-w-xl mx-auto">
+                <span class="text-white"><span class="text-red-500 mr-2">▪</span> Clear</span>
+                <span class="text-white"><span class="text-red-500 mr-2">▪</span> Concise</span>
+                <span class="text-white"><span class="text-red-500 mr-2">▪</span> On Target</span>
+            </div>
+            <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+                <a href="about.html" class="bg-red-700 hover:bg-red-600 text-white font-bold px-8 py-3 rounded-lg transition-colors">
+                    Meet Yael
+                </a>
+                <a href="contact.html" class="bg-white hover:bg-slate-100 text-slate-900 font-bold px-8 py-3 rounded-lg transition-colors">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 border-t border-slate-800 py-8 px-6 text-center">
+        <p class="text-slate-500 text-sm">© 2026 MedPoint Solutions, LLC. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
