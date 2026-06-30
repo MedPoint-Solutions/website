@@ -63,7 +63,7 @@
     <!-- Contact Form -->
     <section class="py-20 px-6">
         <div class="max-w-2xl mx-auto">
-            <form action="https://formsubmit.co/75eca23ac094dfae23abc54139315acb" method="POST" class="space-y-6 bg-white p-8 md:p-12 rounded-2xl border border-slate-200 border-l-4 border-l-red-700 shadow-sm">
+            <form id="contact-form" action="https://formsubmit.co/ajax/75eca23ac094dfae23abc54139315acb" method="POST" class="space-y-6 bg-white p-8 md:p-12 rounded-2xl border border-slate-200 border-l-4 border-l-red-700 shadow-sm">
                 <input type="text" name="_honey" style="display:none">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_subject" value="New Inquiry from MedPoint Solutions Website">
@@ -137,6 +137,16 @@
         </div>
     </section>
 
+    <!-- Thank You Popup -->
+    <div id="thank-you-modal" class="hidden fixed inset-0 bg-slate-950/70 z-50 flex items-center justify-center px-6">
+        <div class="bg-white rounded-2xl border-l-4 border-l-red-700 p-10 max-w-md w-full text-center shadow-xl">
+            <div class="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-3xl mx-auto mb-6">✓</div>
+            <h3 class="text-2xl font-extrabold text-slate-900 mb-3">Thank You!</h3>
+            <p class="text-slate-600 leading-relaxed mb-8">Your message has been received. I&#8217;ll be in touch shortly to follow up on your inquiry.</p>
+            <button id="close-modal" class="bg-red-700 hover:bg-red-600 text-white font-bold px-8 py-3 rounded-lg transition-colors">Close</button>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="bg-slate-950 border-t border-slate-800 py-8 px-6 text-center">
         <p class="text-slate-500 text-sm">© 2026 MedPoint Solutions, LLC. All rights reserved.</p>
@@ -149,15 +159,49 @@
         const correctAnswer = num1 + num2;
         document.getElementById('captcha-question').textContent = `${num1} + ${num2}`;
 
-        document.querySelector('form').addEventListener('submit', function(e) {
+        const form = document.getElementById('contact-form');
+        const modal = document.getElementById('thank-you-modal');
+        const submitBtn = form.querySelector('button[type="submit"]');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
             const userAnswer = parseInt(document.getElementById('captcha-answer').value, 10);
             const errorMsg = document.getElementById('captcha-error');
+
             if (userAnswer !== correctAnswer) {
-                e.preventDefault();
                 errorMsg.classList.remove('hidden');
-            } else {
-                errorMsg.classList.add('hidden');
+                return;
             }
+            errorMsg.classList.add('hidden');
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            })
+            .then(response => {
+                if (response.ok) {
+                    modal.classList.remove('hidden');
+                    form.reset();
+                } else {
+                    alert('Something went wrong. Please try again, or email us directly.');
+                }
+            })
+            .catch(() => {
+                alert('Something went wrong. Please try again, or email us directly.');
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit Inquiry';
+            });
+        });
+
+        document.getElementById('close-modal').addEventListener('click', function() {
+            modal.classList.add('hidden');
         });
     </script>
 
