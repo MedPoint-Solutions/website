@@ -140,14 +140,14 @@ def card(post):
     label = "LinkedIn Post"
     if nice_date(post["date"]):
         label += " · " + nice_date(post["date"])
-    return f'''<div class="bg-white rounded-2xl border border-slate-200 border-l-4 border-l-red-700 p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-4">
+    return f'''<div class="bg-white rounded-2xl border border-slate-200 border-l-4 border-l-red-700 p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3">
 <div>
-<span class="text-xs font-bold tracking-widest text-red-700 uppercase block mb-2">{html.escape(label)}</span>
-<h3 class="text-xl font-bold text-blue-900 mb-1">{html.escape(headline(post))}</h3>
+<span class="text-xs font-bold tracking-widest text-red-700 uppercase block mb-1">{html.escape(label)}</span>
+<h3 class="text-lg font-bold text-blue-900 leading-snug">{html.escape(headline(post))}</h3>
 </div>
 <a href="{html.escape(post["url"], quote=True)}"
 target="_blank" rel="noopener noreferrer"
-class="self-start inline-flex items-center gap-2 bg-slate-900 text-white text-sm font-semibold px-5 py-3 rounded-lg hover:bg-red-700 transition-colors">
+class="self-start inline-flex items-center gap-2 bg-slate-900 text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-red-700 transition-colors">
 Read on LinkedIn <span>→</span>
 </a>
 </div>'''
