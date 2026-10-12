@@ -80,7 +80,7 @@ def fetch():
         profile = os.environ.get("LINKEDIN_PROFILE_URL")
         if not profile:
             sys.exit("Set LINKEDIN_PROFILE_URL (or APIFY_INPUT).")
-        payload = {"targetUrls": [profile], "maxPosts": 30}
+        payload = {"targetUrls": [profile], "maxPosts": 30, "postedLimitDate": SINCE}
     url = f"https://api.apify.com/v2/acts/{ACTOR}/run-sync-get-dataset-items?token={token}"
     req = urllib.request.Request(url, data=json.dumps(payload).encode(),
                                  headers={"Content-Type": "application/json"})
