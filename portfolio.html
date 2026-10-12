@@ -29,6 +29,12 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-73M39Y5CL1');
 </script>
+<style>
+.posts-scroll{scrollbar-width:thin;scrollbar-color:#b91c1c #e2e8f0;}
+.posts-scroll::-webkit-scrollbar{width:8px;}
+.posts-scroll::-webkit-scrollbar-track{background:#e2e8f0;border-radius:8px;}
+.posts-scroll::-webkit-scrollbar-thumb{background:#b91c1c;border-radius:8px;}
+</style>
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans antialiased">
 <!-- Header -->
@@ -119,9 +125,10 @@ View Program <span>→</span>
 </div>
 </div>
 <!-- LinkedIn posts: the cards between the POSTS markers are rebuilt automatically by scripts/update_posts.py from data/posts.json. Edit posts.json, not these cards. -->
-<div>
+<div class="flex flex-col">
 <h2 class="text-2xl font-extrabold text-slate-900 mb-6">On LinkedIn</h2>
-<div class="space-y-6">
+<div class="relative md:flex-1 min-h-[24rem]">
+<div class="posts-scroll space-y-6 max-h-[36rem] md:max-h-none md:absolute md:inset-0 overflow-y-scroll pr-3 pb-1">
 <!-- POSTS:START -->
 <div class="bg-white rounded-2xl border border-slate-200 border-l-4 border-l-red-700 p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-4">
 <div>
@@ -146,6 +153,7 @@ Read on LinkedIn <span>→</span>
 </a>
 </div>
 <!-- POSTS:END -->
+</div>
 </div>
 </div>
 </div>

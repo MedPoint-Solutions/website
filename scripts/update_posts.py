@@ -16,7 +16,7 @@ Settings (environment variables, all optional except APIFY_TOKEN for fetching):
   APIFY_ACTOR           default harvestapi~linkedin-profile-posts
   APIFY_INPUT           full JSON input for the actor, overrides the default
   SINCE                 earliest post date to add, default 2026-07-28
-  SHOW                  how many posts to show on the page, default 4
+  SHOW                  how many posts to list on the page, newest first, default 50
 """
 import html
 import json
@@ -33,7 +33,7 @@ PAGE = ROOT / "portfolio.html"
 START, END = "<!-- POSTS:START -->", "<!-- POSTS:END -->"
 
 SINCE = os.environ.get("SINCE", "2026-07-28")
-SHOW = int(os.environ.get("SHOW", "4"))
+SHOW = int(os.environ.get("SHOW", "50"))
 ACTOR = os.environ.get("APIFY_ACTOR", "harvestapi~linkedin-profile-posts")
 
 
