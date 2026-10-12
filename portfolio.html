@@ -30,10 +30,10 @@ gtag('js', new Date());
 gtag('config', 'G-73M39Y5CL1');
 </script>
 <style>
-.posts-scroll{scrollbar-width:thin;scrollbar-color:#b91c1c #e2e8f0;}
-.posts-scroll::-webkit-scrollbar{width:8px;}
-.posts-scroll::-webkit-scrollbar-track{background:#e2e8f0;border-radius:8px;}
-.posts-scroll::-webkit-scrollbar-thumb{background:#b91c1c;border-radius:8px;}
+.col-scroll{scrollbar-width:thin;scrollbar-color:#b91c1c #e2e8f0;}
+.col-scroll::-webkit-scrollbar{width:8px;}
+.col-scroll::-webkit-scrollbar-track{background:#e2e8f0;border-radius:8px;}
+.col-scroll::-webkit-scrollbar-thumb{background:#b91c1c;border-radius:8px;}
 </style>
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans antialiased">
@@ -75,14 +75,15 @@ gtag('config', 'G-73M39Y5CL1');
 <section class="py-20 px-6 max-w-6xl mx-auto">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
 <!-- Programs -->
-<div>
+<div class="flex flex-col">
 <h2 class="text-2xl font-extrabold text-slate-900 mb-6">Programs</h2>
-<div class="space-y-4">
+<div class="col-scroll space-y-4 max-h-[32rem] md:max-h-none md:h-[34rem] overflow-y-auto pr-3 pb-1">
+<!-- Newest program at the top. To add one, copy a card and paste it here. -->
 <div class="bg-white rounded-2xl border border-slate-200 border-l-4 border-l-red-700 p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3">
 <div>
-<h3 class="text-lg font-bold text-blue-900 leading-snug">Biomarker Testing and Precision Care in PDAC</h3>
+<h3 class="text-lg font-bold text-blue-900 leading-snug">Navigating the Unexpected: Lifestyle Variables and Patient Safety with Once-Weekly Basal Insulin</h3>
 </div>
-<a href="https://www.medlive.com/cancerhcp/show/26-02-03-pdac-hcp-exchange/onnyd-presentation-page"
+<a href="https://www.medlive.com/aafp/show/26-09-22-navigating-the-unexp5997/"
 target="_blank" rel="noopener noreferrer"
 class="self-start inline-flex items-center gap-2 bg-slate-900 text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-red-700 transition-colors">
 View Program <span>→</span>
@@ -100,9 +101,9 @@ View Program <span>→</span>
 </div>
 <div class="bg-white rounded-2xl border border-slate-200 border-l-4 border-l-red-700 p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3">
 <div>
-<h3 class="text-lg font-bold text-blue-900 leading-snug">Connecting PTEN Deficiency to Treatment for mHSPC</h3>
+<h3 class="text-lg font-bold text-blue-900 leading-snug">Biomarker Testing and Precision Care in PDAC</h3>
 </div>
-<a href="https://www.medlive.com/cancerhcp/show/25-11-17-connecting-pten-defi/ixvkn-presentation-page"
+<a href="https://www.medlive.com/cancerhcp/show/26-02-03-pdac-hcp-exchange/onnyd-presentation-page"
 target="_blank" rel="noopener noreferrer"
 class="self-start inline-flex items-center gap-2 bg-slate-900 text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-red-700 transition-colors">
 View Program <span>→</span>
@@ -110,9 +111,9 @@ View Program <span>→</span>
 </div>
 <div class="bg-white rounded-2xl border border-slate-200 border-l-4 border-l-red-700 p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3">
 <div>
-<h3 class="text-lg font-bold text-blue-900 leading-snug">Navigating the Unexpected: Lifestyle Variables and Patient Safety with Once-Weekly Basal Insulin</h3>
+<h3 class="text-lg font-bold text-blue-900 leading-snug">Connecting PTEN Deficiency to Treatment for mHSPC</h3>
 </div>
-<a href="https://www.medlive.com/aafp/show/26-09-22-navigating-the-unexp5997/"
+<a href="https://www.medlive.com/cancerhcp/show/25-11-17-connecting-pten-defi/ixvkn-presentation-page"
 target="_blank" rel="noopener noreferrer"
 class="self-start inline-flex items-center gap-2 bg-slate-900 text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-red-700 transition-colors">
 View Program <span>→</span>
@@ -123,8 +124,7 @@ View Program <span>→</span>
 <!-- LinkedIn posts: the cards between the POSTS markers are rebuilt automatically by scripts/update_posts.py from data/posts.json. Edit posts.json, not these cards. -->
 <div class="flex flex-col">
 <h2 class="text-2xl font-extrabold text-slate-900 mb-6">On LinkedIn</h2>
-<div class="relative md:flex-1 min-h-[24rem]">
-<div class="posts-scroll space-y-4 max-h-[36rem] md:max-h-none md:absolute md:inset-0 overflow-y-scroll pr-3 pb-1">
+<div class="col-scroll space-y-4 max-h-[32rem] md:max-h-none md:h-[34rem] overflow-y-auto pr-3 pb-1">
 <!-- POSTS:START -->
 <div class="bg-white rounded-2xl border border-slate-200 border-l-4 border-l-red-700 p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3">
 <div>
@@ -149,7 +149,6 @@ Read on LinkedIn <span>→</span>
 </a>
 </div>
 <!-- POSTS:END -->
-</div>
 </div>
 </div>
 </div>
