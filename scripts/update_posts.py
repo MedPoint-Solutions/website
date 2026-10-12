@@ -128,8 +128,18 @@ def headline(post):
     text = unicodedata.normalize("NFKC", post["text"])
     text = re.sub(r"(\s*#\w+)+\s*$", "", text)       # drop trailing hashtag block
     text = re.sub(r"#(\w)", r"\1", text).strip()      # inline #Pluvicto -> Pluvicto
-    first = re.split(r"(?<=[.!?])\s+|\n", text, maxsplit=1)[0].strip()
-    return first or text[:160]
+    # The hook is the post's opening line. Keep its sentences up to ~150
+    # characters, and drop a trailing lead-in that ends with a colon.
+    line = text.split("\n", 1)[0].strip()
+    sentences = re.split(r"(?<=[.!?:])\s+", line)
+    hook = []
+    for s in sentences:
+        if s.endswith(":"):
+            break
+        if hook and len(" ".join(hook + [s])) > 150:
+            break
+        hook.append(s)
+    return " ".join(hook) or line[:160]
 
 
 def nice_date(d):
