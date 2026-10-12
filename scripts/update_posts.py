@@ -23,6 +23,7 @@ import json
 import os
 import re
 import sys
+import unicodedata
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -124,7 +125,9 @@ def merge(posts, items):
 def headline(post):
     if post.get("title"):
         return post["title"]
-    text = re.sub(r"#\w+", "", post["text"]).strip()
+    text = unicodedata.normalize("NFKC", post["text"])
+    text = re.sub(r"(\s*#\w+)+\s*$", "", text)       # drop trailing hashtag block
+    text = re.sub(r"#(\w)", r"\1", text).strip()      # inline #Pluvicto -> Pluvicto
     first = re.split(r"(?<=[.!?])\s+|\n", text, maxsplit=1)[0].strip()
     return first or text[:160]
 
