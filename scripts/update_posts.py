@@ -10,6 +10,9 @@ data/posts.json is the source of truth. Per post you can edit by hand:
   "hidden": true keeps a post off the site
 Your edits are kept on every run.
 
+Posts taken down from LinkedIn are marked "removed": true automatically
+and drop off the page on the next run.
+
 Settings (environment variables, all optional except APIFY_TOKEN for fetching):
   APIFY_TOKEN           Apify API token (GitHub secret)
   LINKEDIN_PROFILE_URL  e.g. https://www.linkedin.com/in/yourname/
@@ -119,7 +122,34 @@ def merge(posts, items):
         seen_text.add(key(p["text"]))
         added += 1
     print(f"Added {added} new post(s).")
+    mark_removed(posts, items)
     return posts
+
+
+def mark_removed(posts, items):
+    """Hide posts that were taken down from LinkedIn.
+
+    A post is treated as taken down when this run's fetch covers its date
+    but the post is not in the results. Only runs when the fetch looks
+    complete (at least 5 posts back), so a failed or partial fetch never
+    hides anything. If a post shows up again later, it is shown again.
+    """
+    fetched = [p for p in (normalize(i) for i in items) if p]
+    if len(fetched) < 5:
+        return
+    ids = {p["id"] for p in fetched}
+    texts = {key(p["text"]) for p in fetched}
+    oldest = min(p["date"] for p in fetched)
+    changed = 0
+    for p in posts:
+        present = p["id"] in ids or key(p["text"]) in texts
+        if present and p.get("removed"):
+            del p["removed"]
+            changed += 1
+        elif not present and p["date"] >= oldest and not p.get("removed"):
+            p["removed"] = True
+            changed += 1
+    print(f"Marked {changed} post(s) as removed or restored.")
 
 
 def headline(post):
@@ -167,7 +197,7 @@ Read on LinkedIn <span>→</span>
 
 
 def render(posts):
-    visible = sorted((p for p in posts if not p.get("hidden")),
+    visible = sorted((p for p in posts if not p.get("hidden") and not p.get("removed")),
                      key=lambda p: p["date"], reverse=True)[:SHOW]
     block = "\n".join(card(p) for p in visible)
     page = PAGE.read_text(encoding="utf-8")
