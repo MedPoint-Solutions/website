@@ -1,5 +1,11 @@
 [
   {
+    "id": "7530608731558989825",
+    "date": "2026-11-23",
+    "url": "https://www.linkedin.com/posts/yaelwaknine_meded-cme-oncology-activity-7530608731558989825-lG8h",
+    "text": "Remember when I wrote about AI citing an ivonescimab trial to make the case for post-TKI pembro + chemo in EGFR+ NSCLC?\n\nPD-1 inhibitors have tried, and failed, to add benefit to chemo: pembro in KN-789; nivo in CM-722. Both missed on the first step towards OS benefit: PFS.\n\nHARMONi gave it a shot with ivonescimab. PFS hit (HR=0.52), OS didn't (HR=0.79, P=.057), and they were coprimary endpoints. The FDA's view: PFS benefit that doesn't translate to OS gain doesn't make the cut.\n\nWhat's interesting is the updated OS slide from WCLC. It came with a bright red headline, saying median OS was longer with ivonescimab (HR=0.76, P=.0151). \n\nAsk an AI to summarize that slide and you'll get \"positive phase 3 readout.\" Half the primary endpoints, with 100% confidence.\n\nNow read the small print (if you can!). The P value is labeled \"nominal,\" meaning OS had already failed the planned test. The curve also combines Asian and Western data, with cutoffs 14 months apart.\n\nI read the data critically, something my AI finds exhaustingly nitpicky.\n\nThe parking lot guy saw the red headline and declared victory. The FDA knew better.\n\n#MedEd #CME #Oncology #MedComms #LungCancer #GenAI"
+  },
+  {
     "id": "7526012196858978304",
     "date": "2026-11-10",
     "url": "https://www.linkedin.com/posts/yaelwaknine_meded-cme-medcomms-activity-7526012196858978304-lJvV",
